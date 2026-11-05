@@ -2,4 +2,117 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+button {
+  outline-style: none;
+  border-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1.2fr 5fr;
+}
+
+.header {
+  background-color: #ffffff;
+  
+  grid-column: 2 / 3;
+  
+  display: grid;
+}
+
+.header > * {
+}
+
+.header p {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.search-section {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 60px 2fr 0.50fr 50px 0.75fr;
+  align-items: center;
+}
+
+.search-section .icon {
+  height: 1.2rem;
+  justify-self: end;
+  margin-right: 10px;
+}
+
+.search-section .avatar {
+  height: 2.2rem;
+  justify-self: end;
+}
+
+.search-section p {
+  font-size: 0.9rem;
+  margin-left: 20px;
+}
+
+.search-section .bar {
+  background-color: #EAEDF0;
+  border-radius: 50px;
+  width: 100%;
+  height: 35%;
+}
+
+.upload-section {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 85px 1.5fr repeat(1, minmax(85px, 1fr));
+  position: relative;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.upload-section .avatar{
+  height: 3.2rem;
+  justify-self: end;
+}
+
+.upload-section .greetings {
+  margin-left: 20px;
+}
+
+.greetings p:nth-child(1) {
+  font-size: 0.75rem;
+}
+
+.upload-section .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.upload-section button {
+  width: 25%;
+  height: 70%;
+  border-radius: 50px;
+  padding: 8px 5px;
+
+  font-size: 0.75rem;
+  font-weight: bold;
+
+  color: #ffffff;
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+.upload-section button:hover {
+  background-color: rgb(154, 223, 250);
+}
+
+.sidebar {
+  background-color: skyblue;
+  grid-row: 1 / 3;
+}
+
+.content {
+  background-color: #EAEDF0;
 }
