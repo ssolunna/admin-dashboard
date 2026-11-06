@@ -12,7 +12,7 @@ button {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 0.75fr 4fr;
   grid-template-rows: 1.2fr 5fr;
 }
 
@@ -24,10 +24,8 @@ button {
   display: grid;
 }
 
-.header > * {
-}
-
-.header p {
+.header p,
+.sidebar li {
   font-weight: 600;
   letter-spacing: -0.5px;
 }
@@ -111,6 +109,46 @@ button {
 .sidebar {
   background-color: skyblue;
   grid-row: 1 / 3;
+}
+
+.sidebar ul {
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: 0.30fr 1fr;
+  row-gap: 10px;
+  align-items: center;
+
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.sidebar .icon {
+  justify-self: center;
+  height: 0.9rem;
+  cursor: pointer;
+}
+
+.sidebar li {
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sidebar li:nth-of-type(1) { /* Dashboard */
+  align-self: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.sidebar .icon.dashboard {
+  height: 2rem;
+  margin-bottom: 30px;
+}
+
+.sidebar li:nth-of-type(7),
+.sidebar .icon.groups { /* Communities */
+  margin-bottom: 30px;
 }
 
 .content {
