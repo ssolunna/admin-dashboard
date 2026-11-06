@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.5px;
 }
 
 button {
@@ -27,7 +28,6 @@ button {
 .header p,
 .sidebar li {
   font-weight: 600;
-  letter-spacing: -0.5px;
 }
 
 .search-section {
@@ -153,4 +153,64 @@ button {
 
 .content {
   background-color: #EAEDF0;
+
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+
+  padding: 30px 15px;
+}
+
+.projects-section {
+  grid-row: 1 / 3;
+
+  display: grid;
+  grid-template-rows: 30px 1fr;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.projects .card {
+  height: 175px;
+  padding: 20px 15px;
+  background-color: #ffffff;
+
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px 0px #cdcdcd;
+  border-left-style: solid;
+  border-color: #f5b30d;
+  border-width: 5px;
+
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: 5px;
+}
+
+.projects .card .title,
+.projects-section > p {
+  font-weight: bold;
+}
+
+.projects .card p {
+  color: #a8a7a7;
+  font-size: 0.8rem;
+}
+
+.projects .icons {
+  height: 1.2rem;
+  margin-top: 15px;
+
+  justify-content: end;
+  align-self: end;
+
+  display: flex;
+  gap: 20px;
+
+  cursor: pointer;
 }
