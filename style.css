@@ -192,12 +192,15 @@ button {
   gap: 5px;
 }
 
+.projects-section > p,
 .projects .card .title,
-.projects-section > p {
+.announcements-section > p,
+.announcements .card .title {
   font-weight: bold;
 }
 
-.projects .card p {
+.projects .card p,
+.announcements .card p {
   color: #a8a7a7;
   font-size: 0.8rem;
 }
@@ -213,4 +216,34 @@ button {
   gap: 20px;
 
   cursor: pointer;
+}
+
+.announcements-section {
+  display: grid;
+  align-content: start;
+  margin-right: 20px;
+}
+
+.announcements {
+  background-color: #ffffff;
+  padding: 20px 20px 10px 20px;
+  border-radius: 10px;
+}
+
+.announcements-section > p {
+  margin-bottom: 9px;
+}
+
+.announcements .card .title,
+.announcements .card p {
+  font-size: 0.7rem;
+}
+
+.announcements .card {
+  margin-bottom: 10px;
+}
+
+.announcements .card hr {
+  border-color: #05050522;
+  margin-top: 10px;
 }
